@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce" parallel="test" >
+
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+	<listeners>
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Run on chrome">
+		<parameter name="os" value="Windows" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="80.0" />
+
+		<classes>
+			<class name="grid.Level_03_Register_Login_SauceLab" />
+		</classes>
+	</test>
+
+	<!-- <test name="Run on firefox">
+		<parameter name="os" value="Windows" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browser_version" value="80.0" />
+		<classes>
+			<class name="grid.Level_03_Register_Login_SauceLab" />
+		</classes>
+	</test> -->
+	<!-- <test name="Run on safari">
+		<parameter name="os" value="OS X" />
+		<parameter name="os_version" value="Catalina" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="89.0" />
+		<classes>
+			<class name="grid.Level_03_Register_Login_SauceLab" />
+		</classes>
+	</test> -->
+
+</suite>

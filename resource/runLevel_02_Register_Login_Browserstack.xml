@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce" parallel="test" thread-count="2">
+
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+	<listeners>
+		
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Run on chrome">
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="10" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="89.0" />
+		
+		<classes>
+			<class name="grid.Level_02_Register_Login_Browserstack" />
+		</classes>
+	</test>
+
+	<test name="Run on firefox">
+		<parameter name="os" value="Windows" />
+		<parameter name="os_version" value="10" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browser_version" value="86.0" />
+		<classes>
+			<class name="grid.Level_02_Register_Login_Browserstack" />
+		</classes>
+	</test>
+	<test name="Run on safari">
+		<parameter name="os" value="OS X" />
+		<parameter name="os_version" value="Catalina" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="89.0" />
+		<classes>
+			<class name="grid.Level_02_Register_Login_Browserstack" />
+		</classes>
+	</test>
+
+</suite>

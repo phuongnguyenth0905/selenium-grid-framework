@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce" parallel="test" thread-count="2">
+
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+	<listeners>
+		<!-- <listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ExtentListenerV2" />
+		<listener class-name="reportConfig.ExtentListenerV3" />
+		<listener class-name="reportConfig.ExtentListenerV4" />
+		<listener class-name="reportConfig.AllureTestListener" /> -->
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Run on chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="ip_address" value="192.168.1.38" />
+		<parameter name="port" value="5555" />
+		<classes>
+			<class name="grid.Level_01_Register_Login_Step_By_Step" />
+		</classes>
+	</test>
+
+	<test name="Run on firefox">
+		<parameter name="browser" value="firefox" />
+		<parameter name="ip_address" value="192.168.1.38" />
+		<parameter name="port" value="5555" />
+		<classes>
+			<class name="grid.Level_01_Register_Login_Step_By_Step" />
+		</classes>
+	</test>
+
+</suite>
